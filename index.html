@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="libs/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
     <link href="libs/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -35,6 +36,18 @@
     <p>
         In order to use this PoC you need to <a href="#" id="grantConnect">grant this site permission to access the TI calc(s) first.</a>
     </p>
+    
+    <h2>
+        Send Raw USB Data
+    </h2>
+    
+    <div class="card deviceCard" id="DataFrameSend">
+        <form name="FrameSend" onSubmit="return handleClick()">
+            <input name="Submit"  type="submit" value="Send" />
+            Enter raw frame data to send:
+            <p><input type="text" name="SendData"</p>
+        </form>
+    </div>
 
     <div class="card deviceCard" id="deviceCardTemplate">
         <h4 class="card-header">calc name</h4>
